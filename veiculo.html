@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEB | Veículo mais utilizado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="app-body">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-glass">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html">
+                <span class="brand-mark">T</span>
+                <span>
+                    TEB
+                    <small>TRANSPORTES</small>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto gap-lg-2">
+
+                    <li>
+                        <a class="nav-link" href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="frete.html">
+                            Frete
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="combustivel.html">
+                            Combustível
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="viagens.html">
+                            Viagens
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="veiculo.html">
+                            Veículos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="entregas.html">
+                            Entregas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container app-main">
+
+        <div class="app-head">
+            <div>
+                <span class="eyebrow dark">
+                    DESAFIO 04 / FROTA
+                </span>
+                <h1>
+                    Veículo mais utilizado
+                </h1>
+                <p>
+                    Registre a quantidade de viagens e acompanhe a utilização da frota.
+                </p>
+            </div>
+            <a href="index.html" class="back-link">
+                <i class="bi bi-arrow-left"></i>
+                Central
+            </a>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="panel">
+                    <h3>
+                        Registrar utilização
+                    </h3>
+                    <label class="form-label mt-3">
+                        Veículo
+                    </label>
+                    <select
+                        id="veiculoNome"
+                        class="form-select mb-3"
+                    >
+                        <option>
+                            Van TEB-01
+                        </option>
+                        <option>
+                            Caminhão TEB-02
+                        </option>
+                        <option>
+                            Truck TEB-03
+                        </option>
+                        <option>
+                            Carreta TEB-04
+                        </option>
+                        <option>
+                            Carreta Sider TEB-05
+                        </option>
+                        <option>
+                            Bitrem TEB-06
+                        </option>
+                        <option>
+                            Rodotrem TEB-07
+                        </option>
+                    </select>
+
+                    <label class="form-label">
+                        Quantidade de viagens
+                    </label>
+
+                    <input
+                        id="qtdViagens"
+                        type="number"
+                        class="form-control"
+                        placeholder="12"
+                    >
+
+                    <button
+                        class="btn btn-warning fw-bold mt-4 w-100"
+                        onclick="registrarVeiculo()"
+                    >
+                        Registrar utilização
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="panel">
+                    <h3>
+                        Utilização da frota
+                    </h3>
+                    <div
+                        id="tabelaVeiculos"
+                        class="fleet-list mt-3"
+                    ></div>
+
+                    <div
+                        id="maisUtilizado"
+                        class="alert alert-warning mt-3 mb-0"
+                    >
+                        Registre um veículo para começar.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container d-flex justify-content-between flex-wrap gap-2">
+            <span>
+                TEB Transportes
+            </span>
+            <span>
+                Dupla 07 • Abraão e João Gabriel
+            </span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
