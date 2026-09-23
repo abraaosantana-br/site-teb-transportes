@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEB | Cálculo de frete</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="app-body">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-glass">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html">
+                <span class="brand-mark">
+                    T
+                </span>
+
+                <span>
+                    TEB
+                    <small>TRANSPORTES</small>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto gap-lg-2">
+                    <li>
+                        <a class="nav-link" href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="frete.html">
+                            Frete
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="combustivel.html">
+                            Combustível
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="viagens.html">
+                            Viagens
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="veiculo.html">
+                            Veículos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="entregas.html">
+                            Entregas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container app-main">
+        <div class="app-head">
+            <div>
+                <span class="eyebrow dark">
+                    DESAFIO 01 / FRETE
+                </span>
+
+                <h1>
+                    Cálculo de frete
+                </h1>
+
+                <p>
+                    Estime o valor de uma entrega com os dados da carga.
+                </p>
+            </div>
+            <a href="index.html" class="back-link">
+                <i class="bi bi-arrow-left"></i>
+                Central
+            </a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="panel">
+                    <h3>
+                        Dados da carga
+                    </h3>
+                    <p class="text-muted small">
+                        Preencha os campos para calcular o valor estimado.
+                    </p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Distância (km)
+                            </label>
+                            <input
+                                id="distancia"
+                                type="number"
+                                class="form-control"
+                                placeholder="250"
+                            >
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Peso (kg)
+                            </label>
+                            <input
+                                id="peso"
+                                type="number"
+                                class="form-control"
+                                placeholder="500"
+                            >
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Modalidade
+                            </label>
+
+                            <select
+                                id="tipoFrete"
+                                class="form-select"
+                            >
+                                <option value="1">
+                                    Rodoviário comum
+                                </option>
+
+                                <option value="1.25">
+                                    Expresso
+                                </option>
+
+                                <option value="1.45">
+                                    Carga frágil
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Taxa por km (R$)
+                            </label>
+
+                            <input
+                                id="taxa"
+                                type="number"
+                                class="form-control"
+                                value="2.50"
+                                step=".10"
+                            >
+                        </div>
+                    </div>
+
+                    <button
+                        class="btn btn-warning fw-bold mt-4 px-4"
+                        onclick="calcularFrete()"
+                    >
+                        Calcular frete
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div
+                    id="resultadoFrete"
+                    class="result-panel"
+                >
+                    <span class="result-label">
+                        RESULTADO
+                    </span>
+                    <h3 class="mt-3">
+                        Pronto para calcular
+                    </h3>
+                    <p class="text-secondary">
+                        O valor estimado aparecerá aqui.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container d-flex justify-content-between flex-wrap gap-2">
+            <span>
+                TEB Transportes
+            </span>
+            <span>
+                Dupla 07 • Abraão e João Gabriel
+            </span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
